@@ -1,0 +1,2 @@
+# BucketCAM
+Having bucket list that we want to accomplish before we die, is basically showing that we have goals that might seem impossible to accomplish. These goals show how much we appreciate what we see around us.I am pretty sure that we all have thought of or made a bucket list at some point in our lives, these items could also be described as goals that we want to achieve in our personal lives. BucketCAM is a way you can share your bucketlist with millions of people around the world and also look through their wildest fantasy. 

@@ -1,0 +1,230 @@
+i.icon {
+	font-size: 2em;
+	/*icons that have class icon*/
+	
+}
+
+.button1{
+     border:0;
+     background:none;
+        
+}
+
+#notify-container {
+    font-size: 16px;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 0;
+    z-index: 5051;
+}
+
+.toggle{
+	color:blue;
+}
+#buttonClicked{
+	border:0;
+     background:none;
+}
+/*.form1{
+margin-block-end: 0px;
+	
+}*/
+.overlay {
+    float: left;
+    margin: 0em 3em 1em 0em;
+}
+.ui.main.text{
+	
+	margin-top:150px;
+}
+h3{
+	margin-top: 100px;
+    text-align: center;
+    color: #873030;
+}
+.column.c1{
+	padding-left: 500px;
+    padding-right: 510px;
+}
+/*.container.main /*{
+	margin-top: 100px;
+}*/
+#delete{
+	display:inline;
+}
+/*.file{
+	dispaly:none;
+}*/
+.delete-comment{
+	display :inline;
+}
+.header.huge  { font-family: "Carter One";
+	font-size: 24px;
+	font-style: normal;
+	font-variant: normal; 
+	font-weight: 700; 
+	line-height: 26.4px; }
+.ui.negative{
+	margin-top:100px;
+	margin-bottom:5px;
+	text-align:center;
+    margin-left: 300px;
+    margin-right: 300px;
+}
+.ui.green{
+	margin-top:100px;
+	text-align:center;
+    margin-left: 300px;
+    margin-right: 300px;
+}
+   .ui.inverted.segment {
+        background-color: #777;
+      }
+
+      .ui.vertical.segment:not(.inverted) {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+      }
+
+      .six.wide.column img {
+        width: 100%;
+      }
+
+      .ui.borderless.inverted.menu {
+        background-color: #2f2f2f;
+        border-radius: 4px;
+        flex-wrap: wrap;
+      }
+
+      .ui.borderless.inverted.menu .active.item {
+        background-color: black;
+      }
+
+      span.sub {
+        color: rgba(0, 0, 0, 0.6);
+		 font-size:large;
+      }
+
+      .ten.wide.column h1 {
+        font-size: 3rem;
+      }
+
+      .ten.wide.column p {
+        font-size: 1.5rem;
+      }
+
+      p code {
+        color: #c7254e;
+        background-color: #f9f2f4;
+        border-radius: 4px;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+      }
+
+      .ui.tablet.computer.only.padded.grid {
+        position: absolute;
+        z-index: 8;
+        width: 100%;
+        top: 1rem;
+      }
+
+      .ui.mobile.only.grid .ui.menu .ui.vertical.menu {
+        display: none;
+      }
+
+      .ui.mobile.only.grid .ui.vertical.menu .dropdown.icon {
+        float: unset;
+      }
+
+      .ui.mobile.only.grid .ui.vertical.menu .dropdown.icon:before {
+        content: "\f0d7";
+      }
+
+      .ui.mobile.only.grid .ui.vertical.menu .ui.dropdown.item .menu {
+        position: static;
+        width: 100%;
+        background-color: unset;
+        border: none;
+      }
+
+      .ui.mobile.only.grid .ui.vertical.menu .ui.dropdown.item {
+        background-color: rgb(47, 47, 47);
+      }
+
+      .ui.mobile.only.grid .ui.vertical.menu .ui.dropdown.item .menu {
+        margin-top: 6px;
+      }
+
+      .ui.mobile.only.grid .ui.vertical.menu .ui.dropdown.item .menu .header,
+      .ui.mobile.only.grid .ui.vertical.menu .ui.dropdown.item .menu .item {
+        color: rgba(255, 255, 255, 0.9) !important;
+      }
+
+      .slide .ui.inverted.vertical.segment {
+        padding-top: 16rem;
+        padding-bottom: 4rem;
+        height: 600px;
+      }
+
+      .slide .ui.text.container {
+        max-width: 70%;
+      }
+
+      .slick-dotted.slick-slider {
+        margin-bottom: 0;
+      }
+
+      .slick-prev.slick-arrow {
+        /*padding-left: 8rem;
+        padding-right: calc(8rem + 20px);*/
+		
+     display: inline-block;
+        height: 100%;
+        z-index: 32;
+        background: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 0.5) 0%,
+          rgba(0, 0, 0, 0.0001) 100%
+        );
+      }
+
+      .slick-next.slick-arrow {
+       /* padding-left: 8rem;
+        padding-right: calc(8rem + 20px);*/
+        display: inline-block;
+        height: 100%;
+        z-index: 32;
+        background: linear-gradient(
+          to left,
+          rgba(0, 0, 0, 0.5) 0%,
+          rgba(0, 0, 0, 0.0001) 100%
+        );
+      }
+
+      @media only screen and (max-width: 767px) {
+        .slick-prev.slick-arrow {
+          padding-left: 4rem;
+          padding-right: calc(4rem + 20px);
+        }
+
+        .slick-next.slick-arrow {
+          padding-left: 4rem;
+          padding-right: calc(4rem + 20px);
+        }
+      }
+
+      .slick-dots {
+        bottom: 15px;
+		color:black;
+      }
+
+      .slide .ui.segment h1 {
+        font-size: 3rem;
+      }
+
+      .slide .ui.segment p {
+        font-size: 1.5rem;
+      }

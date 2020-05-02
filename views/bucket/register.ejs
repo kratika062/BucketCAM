@@ -1,0 +1,34 @@
+<%- include ("../partials/header")-%>
+ <div class="ui main text container segment">
+	 
+	 <div class="ui huge header">
+		Sign Up
+	</div>
+	<form class="ui form" action ="/register" method="post">
+		<div class="field">
+			<label>Name</label>
+			<input type="text"  name="username" placeholder="username">	
+		</div>
+		<div class="field">
+			<label>Password</label>
+			<input type="password"  name="password" placeholder="password" >	
+				
+		</div>
+		  <div class="field">
+        <label for="firstName">First Name</label>
+        <input  type="text" name="firstName" placeholder="First Name" autocomplete="off" required />
+      </div>
+      <div class="field">
+        <label for="lastName">Last Name</label>
+        <input type="text" name="lastName" placeholder="Last Name" autocomplete="off" required />
+      </div>
+      <div class="field">
+        <label for="username">Email</label>
+        <input  type="email" name="email" placeholder="email" autocomplete="off" required />
+      </div>
+		 <div class="field">
+          <input class="form-control" type="text" name="adminCode" placeholder="Admin code">
+        </div>
+				<input class="ui violet big basic button" type="submit">
+	</form>
+		</div>

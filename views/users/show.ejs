@@ -1,0 +1,29 @@
+<%- include ("../partials/header")-%>
+
+<h3><%= user.username.toUpperCase() %>'s bucketlists</h3>
+<a class="ui primary button" href="/users/<%= user._id%>/edit" style="margin-left:700px;">Edit Profile</a>
+<br>	
+<br>
+<% bucketlist.forEach(bucketlist => { %>
+
+<div class=" column c1">
+    <div class="ui segment">
+		
+     <img  class="ui centered medium image" src="<%= bucketlist.image%>" alt="<%= bucketlist.name %>">	                   <h4 style="text-align:center"><a href="/bucketlist/<%= bucketlist.id %>"><%= bucketlist.name %></a></h4>
+<div class="description" style="text-align:center;"><p><%=bucketlist.Description%></p></div>
+
+		<%if(currentUser && bucketlist.author.id.equals(currentUser._id)){%>
+		  <a class="ui green basic button" href="/bucketlist/<%=bucketlist._id%>/edit" style="margin-left:170px; margin-right:5px;">Edit</a>
+		 <form id ="delete"  action="/bucketlist/<%=bucketlist._id%>?_method=delete" method="post">
+			 <button  class="ui red basic button" >
+				 Delete
+			 </button>
+    	</form>
+		
+		 <%}%>
+		</div>
+		</div>
+		<br>
+      <% }); %>
+
+<%- include ("../partials/footer")-%>

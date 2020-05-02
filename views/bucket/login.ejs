@@ -1,0 +1,24 @@
+<%- include ("../partials/header")-%>
+
+ <div class="ui main text container segment">
+	<div class="ui huge header">
+		Login
+	</div>
+	<form class="ui form" action ="/login" method="post">
+		<div class="field">
+			<label>Name</label>
+			<input type="text"  name="username" placeholder="username">	
+		</div>
+		<div class="field">
+			<label>Password</label>
+			<input type="password"  name="password" placeholder="password" >	
+				
+		</div>
+		
+				<input class="ui violet big basic button" type="submit">
+		
+		<span>Forgot your password? <a href="/password_reset">Reset password</a></span>
+      <hr>
+      <span>New to YelpCamp? <a href="/register">Sign up now!</a></span>
+	</form>
+		</div>

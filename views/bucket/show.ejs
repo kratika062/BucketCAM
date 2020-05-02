@@ -1,0 +1,104 @@
+<%- include ("../partials/header") -%>
+<div class="ui main text container segment">
+	   <div class="ui huge header" style="text-align:center; color:cadetblue;">
+		<h2><%=blog.name%></h2>
+	   </div>
+ <div class="ui top attached ">
+ <div class="item">
+	<img class="ui centered rounded image" src="<%=blog.image%>">
+	 <div class="content">
+		<span style="color:gray"> <%=blog.created.toDateString()%></span>      <!--blog.created.toString(){can use}-->
+     </div>
+	 <div class="description" style="color:black;">
+	      <p><b>ABOUT : </b>  <%=blog.Description%></p>
+	</div>
+	 <br>
+		 <p>
+	<b>Submitted By :  <%=blog.author.username%></b> <em style="color:cadetblue;">, <%=moment(blog.created).fromNow()%></em>
+	     </p>
+   
+		 
+		 <%if(currentUser){%>
+    
+		 <form action="/bucketlist/<%= blog._id %>/like" method="POST">
+			<button type="submit" id="buttonClicked" style="margin-bottom:20px;">
+				<i class="thumbs up icon" style="color:"></i><%=blog.likes.length%>	
+        	 </button>
+		 	
+		    <div class="ui right floated compact menu">
+            <div class="ui simple dropdown item r">
+            Liked By
+            <i class="dropdown icon"></i>
+            <div class="menu">
+		    <% blog.likes.forEach(function(like) { %>
+				<% if (like.length === 0) { %>
+		    <div class="item">
+			No likes yet	
+			 </div>
+				<%}else{%>
+				<div class="item">
+			<%= like.username%>	
+			 </div>
+			 <%}})%>
+	      </div>
+          </div>
+          </div> 
+	   </form>
+			 <% }else(currentUser && blog.likes.some(function (like){%>
+		     <form action="/bucketlist/<%= blog._id %>/like" method="POST">
+			  <button>
+			  <i class="thumbs up icon"><%=blog.likes.length%></i>	
+			  </button>
+			  </form>
+		      <div class="ui teal buttons">
+  		      <div class="ui button">Liked By</div>
+              <div class="ui floating dropdown icon button">
+               <i class="dropdown icon"></i>
+                <div class="menu">
+
+				
+					<% blog.likes.forEach(function(like) { %>
+	    	    		<% if (like.length === 0) { %>
+        		<div class="item">No likes yet</div>
+			 
+          	<% }else{%>
+					<div class="item"><%= like.author.username %></div>
+			 
+          	<% }})%>
+		
+	  </div>
+      </div>
+      </div> 
+	  
+<%}))%>	 
+		  
+		 <%if(currentUser && blog.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){%>
+		 
+		 <a class="ui orange basic button" href="/bucketlist/<%=blog._id%>/edit">Edit</a>
+		 <form id ="delete"  action="/bucketlist/<%=blog._id%>?_method=delete" method="post">
+			 <button  class="ui red basic button">
+				 Delete
+			 </button>
+    	</form>
+		 <%}%>
+			 <a class="ui blue basic button" href="/bucketlist/<%=blog._id%>/comments/new">Comment</a>
+		 
+		 <% blog.comments.forEach(function(comment){%>
+		 <p><strong><%=comment.author.username%>-</strong> <%=comment.text%>
+		  <span ><%=moment(comment.createdAt).fromNow()%></span>
+		 </p>
+		 <%if(currentUser && comment.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){%>
+		  <a class="ui red basic button" href="/bucketlist/<%=blog._id%>/comments/<%=comment._id%>/edit">Edit</a>
+<form class="delete-comment" action="/bucketlist/<%=blog._id%>/comments/<%=comment._id%>?_method=delete" method="post">
+			  <button class="ui brown basic button">
+				 DELETE 
+			  </button>
+		 </form>
+			<% }%>
+			 <% })%>
+	 </div> 
+	</div>
+	
+</div>
+
+<%- include ("../partials/footer")-%> 
